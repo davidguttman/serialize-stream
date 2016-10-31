@@ -24,7 +24,7 @@ function csvStream (opts) {
   var streams = []
   if (opts.compact) streams.push(compactStream())
   if (opts.flatten) streams.push(flattenStream())
-  streams.push(csv())
+  streams.push(csv(opts))
 
   if (streams.length === 1) return streams[0]
 
